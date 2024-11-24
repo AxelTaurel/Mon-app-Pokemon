@@ -1,0 +1,18 @@
+Projet : Jeu de Cartes Pokémon
+
+Ce projet vise à imiter un jeu de cartes Pokémon à travers une application web développée avec Django. Il comprend trois pages principales :
+
+Page de collection : Affiche toutes les cartes Pokémon disponibles avec leurs détails de base, 
+comme le nom, le type, et les points de vie (PV). Cette page sert d’aperçu général des cartes.
+
+Page de détail : Permet de consulter les informations détaillées d'une carte spécifique, 
+notamment ses attaques avec leur nom, description, et puissance.
+
+Page de modification des PV : Permet d’ajuster les points de vie d'un Pokémon manuellement.
+
+
+Objectif final
+
+L’objectif ultime est de permettre aux utilisateurs de simuler un combat Pokémon. 
+Les attaques des cartes pourront être utilisées pour diminuer les PV des Pokémon adverses, 
+recréant ainsi les mécanismes de base des combats Pokémon.
