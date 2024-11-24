@@ -1,0 +1,81 @@
+/* Conteneur principal pour la collection */
+.card-container {
+    display: flex !important; /* Force flexbox pour garantir une disposition en ligne */
+    justify-content: space-around; /* Espace égal entre les cartes */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+    background-color: #f5f5f5; /* Couleur de fond */
+}
+
+/* Style des cartes */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Largeur fixe pour chaque carte */
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Image des Pokémon */
+.card img {
+    width: 100%; /* Image prend toute la largeur disponible */
+    border-radius: 10px;
+}
+
+/* Titre de la carte (nom du Pokémon) */
+.card h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Type de Pokémon */
+.type {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* PV des Pokémon */
+.pv {
+    font-weight: bold;
+    color: #d9534f; /* Rouge doux */
+    font-size: 1.1em;
+    margin-top: 10px;
+    border: 1px solid #d9534f;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #fff5f5; /* Fond doux */
+}
+
+/* Bouton pour modifier les PV */
+.card a.btn {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Bleu pour le bouton */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card a.btn:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+/* Responsive design : cartes sur plusieurs colonnes */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Les cartes passent en colonne sur petits écrans */
+        align-items: center;
+    }
+}

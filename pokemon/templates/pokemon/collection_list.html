@@ -1,0 +1,17 @@
+{% extends 'pokemon/base.html' %}
+
+{% block content %}
+<div class="card-container">
+    {% for carte in cartes %}
+    <div class="card">
+        <img src="{{ carte.image_url }}" alt="{{ carte.title }}" class="img-fluid">
+        <h2><a href="{% url 'carte_detail' pk=carte.pk %}">{{ carte.title }}</a></h2>
+        <p class="type type-{{ carte.type|lower }}">Type : {{ carte.type }}</p>
+        <p class="pv">PV : {{ carte.Pv }}</p>
+        <a href="{% url 'modifier_pv' pk=carte.pk %}" class="btn btn-primary">Modifier PV</a>
+    </div>
+    {% empty %}
+    <p>Aucune carte à afficher.</p>
+    {% endfor %}
+</div>
+{% endblock %}

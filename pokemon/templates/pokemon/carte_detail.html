@@ -1,0 +1,31 @@
+{% extends 'pokemon/base.html' %}
+
+{% block content %}
+<div class="carte-detail">
+    <div class="carte-image">
+        <img src="{{ carte.image_url }}" alt="{{ carte.title }}" class="img-fluid">
+    </div>
+    <h1 class="carte-titre">{{ carte.title }}</h1>
+    <p class="carte-description">{{ carte.description }}</p>
+    <h3 class="carte-type">Type : {{ carte.type }}</h3>
+    <h3 class="carte-pv">PV : {{ carte.Pv }}</h3>
+
+    <!-- Section des attaques -->
+    <div class="attaques">
+        <h2>Attaques :</h2>
+        {% if attaques %}
+            <ul>
+                {% for attaque in attaques %}
+                    <li class="attaque-item">
+                        <strong class="attaque-nom">{{ attaque.name }}</strong>
+                        <span class="attaque-puissance">Puissance : {{ attaque.power }}</span>
+                        <p class="attaque-description">{{ attaque.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Aucune attaque disponible pour ce Pokémon.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
